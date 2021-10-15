@@ -39,7 +39,9 @@ export default class Blog extends Component {
             </Grid.Column>
 
             <Grid.Column width={6}>
-
+                { users_data && users_data.map(
+                        user => <UserCard author = {user}/> 
+                    )}
             </Grid.Column>
         </Grid>
         )
