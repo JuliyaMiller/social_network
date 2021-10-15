@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import UserCard from './UserCard';
+import { Grid } from 'semantic-ui-react';
+
 
 export default class Blog extends Component {
     state = {
@@ -29,11 +31,17 @@ export default class Blog extends Component {
     render() {
         const {users_data, status, error} = this.state;
         return (
-            <div>
+        <Grid>
+            <Grid.Column width={8}>
                 { users_data && users_data.map(
                     user => <UserCard author = {user}/> 
                 )}
-            </div>
+            </Grid.Column>
+
+            <Grid.Column width={6}>
+
+            </Grid.Column>
+        </Grid>
         )
     }
 }
