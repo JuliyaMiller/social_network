@@ -5,15 +5,15 @@ export default class UserCard extends Component {
     constructor(props){
         super(props);
         this.state = {
-        author: props.author
+        author: props.author,
+        post: props.post
     }
     
 }
         
-    
     render() {
-        const { author } = this.props
-
+        const { author, post } = this.props;
+    
         return (
             <Card>
             <Image src='https://react.semantic-ui.com/images/avatar/large/matthew.png' wrapped ui={false} />
